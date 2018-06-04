@@ -1,0 +1,30 @@
+@font-face{
+	font-family: 'MyFont';
+	src: url(../font/fee66e712a8a08eef5805a46892932ad.woff) format('woff'),
+		 url(../font/af7ae505a9eed503f8b8e6982036873e.woff2) format('woff2');
+    font-weight: 600;
+    font-style: normal;		 
+}
+
+.hello {
+  color: red;
+  background: url(../img/28RT7q--icon.png) no-repeat center center;
+  font-family: 'MyFont';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
