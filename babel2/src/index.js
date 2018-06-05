@@ -8,7 +8,7 @@ let a = {a:1, b:2};
 console.log({...a, c:3});
 
 async function* genAnswers() {
-  let stream = [ Promise.resolve(4), Promise.resolve(9), Promise.resolve(12) ];
+  let stream = [Promise.resolve(4), Promise.resolve(9), Promise.resolve(12)];
   let total = 0;
   for await (let val of stream) {
     total += await val;
