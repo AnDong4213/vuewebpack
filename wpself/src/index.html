@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+		<div id="haha" class="hehe">
+			<!--<i>我是哈哈...</i>-->
+			<p>赵安东</p>
+			<p><%= htmlWebpackPlugin.options.date %></p>
+			<!--
+			<% for(var key in htmlWebpackPlugin.files){ %>
+				<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+			<%  }   %>
+			-->
+			
+			<!--
+			<% for(var key in htmlWebpackPlugin.options){%>
+		    	<p><%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %></p>
+		    <% } %>
+		    -->
+		    
+		</div>
+	</body>
+</html>
