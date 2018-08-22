@@ -1,0 +1,8 @@
+gulp和grunt其实是执行任务的...
+webpack天生支持代码分割 code-splitting
+是一个全局的分析工具，也就是说它会分析整个项目下的跟你这个应用相关引入的模块
+chunk最终会打包成bundle, module是每次import 或者require进来的模块
+
+的组合，再加上些配置
+
+把网页的优化融在了工具中，配置好后自动做到网页优化。。。
