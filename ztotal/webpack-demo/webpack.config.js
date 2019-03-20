@@ -17,44 +17,67 @@ module.exports = {
   },
   module: {
     rules: [
-      {
+      /* {
         test: /\.(png|jpg|gif)$/,
         use: {
           loader: 'file-loader',
           options: {
             //placeholders 占位符
             name: '[name]_[hash:7].[ext]',
-            /* name() {
-              if (env === 'development') {
-                return '[path][name].[ext]'
-              }
-              return '[hash].[ext]'
-            }, */
+
+            // name() {
+            //   if (env === 'development') {
+            //     return '[path][name].[ext]'
+            //   }
+            //   return '[hash].[ext]'
+            // },
+
             outputPath: 'images/',
             // publicPath: 'assets/',
             emitFile: true
           }
         }
-      }
+      } */
 
-      /* {
+      {
         test: /\.(png|jpg|gif)$/,
         use: {
           loader: 'url-loader',
           options: {
             name: '[name]_[hash:7].[ext]',
             outputPath: 'images/',
-            limit: 1024 * 50
+            limit: 1024 * 20
           }
         }
-      } */
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader', 
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              modules: true
+            }
+          }, 
+          'sass-loader', 
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.(eot|ttf|svg|woff|woff2)($|\?)/i,
+        use: {
+          loader: 'file-loader'
+        }
+      }
       
     ]
   },
   plugins: [
     // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: '我的HWP',
+      title: 'WP',
     })
   ]
 }

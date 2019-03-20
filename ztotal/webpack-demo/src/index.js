@@ -1,7 +1,12 @@
 import haDate from './show';
-import imgName from  './2.png'
-import imgName2 from  './6.png'
-import imgName3 from  './00.png'
+// import './index.scss';
+
+// 加上 modules: true后
+import haha from './index.scss';
+
+import imgName from  './images/28.png'
+import imgName2 from  './images/9.png'
+import imgName3 from  './images/jolin.jpg'
 
 let root = document.createElement('div');
 root.id = 'root';
@@ -19,6 +24,11 @@ img.onerror = function() {
 img.src = imgName;
 img2.src = imgName2;
 img3.src = imgName3;
+
+img2.classList.add(haha.imgSize2)
+img3.classList.add(haha.imgSize)
+root.classList.add(haha.iconfont, haha.iconbrightness)
+
 document.body.append(root)
 root.append(img)
 root.append(img2)
