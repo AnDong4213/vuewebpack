@@ -2,9 +2,6 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-let env = 'development';
-// let env = 'production';
-
 module.exports = {
   mode: 'development',
   // entry: './src/index.js',
@@ -50,19 +47,27 @@ module.exports = {
           }
         }
       },
-      {
-        test: /\.scss$/,
+      /* {
+        test: /\.(scss|css)$/,
         use: [
           'style-loader', 
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 2,
-              modules: true
+              importLoaders: 1
             }
           }, 
-          'sass-loader', 
-          'postcss-loader'
+          'sass-loader'
+        ]
+      }, */
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          'style-loader/url',
+          {
+            loader: 'file-loader'
+          },
+          'sass-loader'
         ]
       },
       {
@@ -75,9 +80,8 @@ module.exports = {
     ]
   },
   plugins: [
-    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'WP',
+      title: 'webpack'
     })
   ]
 }

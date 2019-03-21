@@ -1,0 +1,8 @@
+#root {
+  background-color: #ccc;
+  width: 400px;
+  height: 400px; }
+
+.imgSize {
+  border: 1px dashed red;
+  transform: translate(100px, 100px); }
