@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "./dist/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -86,14 +86,25 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/common.css":
-/*!******************************************************************************************************************************************************!*\
-  !*** ./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/common.css ***!
-  \******************************************************************************************************************************************************/
+/***/ "./css.transform.js":
+/*!**************************!*\
+  !*** ./css.transform.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = function(css) {\r\n  // console.log(css);\r\n  console.log(window.innerWidth);\r\n\r\n  if (window.innerWidth >= 768) {\r\n    return css.replace('#ccc', '#eee');\r\n  } else {\r\n    return css.replace('#ccc', 'blue');\r\n  }\r\n  \r\n}\n\n//# sourceURL=webpack:///./css.transform.js?");
+
+/***/ }),
+
+/***/ "./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/haha.scss":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/haha.scss ***!
+  \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".bigBox {\\n  border: 2px dashed red; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/common.css?./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body .imgSize2 {\\n  border: 1px dashed green;\\n  height: 100px;\\n  width: 100px;\\n  margin: 20px;\\n  display: block; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/haha.scss?./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -104,18 +115,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-lo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#root {\\n  background-color: #ccc;\\n  width: 400px;\\n  height: 400px; }\\n\\n.imgSize {\\n  transform: translate(100px, 100px);\\n  width: 100px;\\n  height: 100px; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/index.css?./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js");
-
-/***/ }),
-
-/***/ "./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/index.scss":
-/*!******************************************************************************************************************************************************!*\
-  !*** ./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/index.scss ***!
-  \******************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body .imgSize {\\n  border: 1px dashed green; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/index.scss?./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"@charset \\\"UTF-8\\\";\\n* {\\n  margin: 0;\\n  padding: 0; }\\n\\n.root {\\n  background-color: #ccc;\\n  width: 400px;\\n  height: 400px; }\\n\\n.imgSize {\\n  transform: translate(100px, 100px);\\n  width: 100px;\\n  height: 100px; }\\n\\n.box {\\n  /* composes: bigBox from './common.css'; */\\n  /* 如果有的话放在第一行 */\\n  width: 50px;\\n  height: 50px;\\n  margin: 20px;\\n  background-color: #999;\\n  color: blue; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/index.css?./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -153,14 +153,14 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
-/***/ "./src/common.css":
-/*!************************!*\
-  !*** ./src/common.css ***!
-  \************************/
+/***/ "./src/haha.scss":
+/*!***********************!*\
+  !*** ./src/haha.scss ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./common.css */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/common.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"insertInto\":\"body\",\"singleton\":true,\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = \"body\";\n\nvar update = __webpack_require__(/*! ../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ \"./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/common.css?");
+eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./haha.scss */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/haha.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\ntransform = __webpack_require__(/*! ../css.transform.js */ \"./css.transform.js\");\n\nvar options = {\"insertInto\":\"body\",\"singleton\":true,\"transform\":\"./css.transform.js\",\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = \"body\";\n\nvar update = __webpack_require__(/*! ../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ \"./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/haha.scss?");
 
 /***/ }),
 
@@ -182,7 +182,7 @@ eval("module.exports = __webpack_require__.p + \"images/28_40e1970.png\";\n\n//#
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./index.css */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/index.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"insertInto\":\"body\",\"singleton\":true,\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = \"body\";\n\nvar update = __webpack_require__(/*! ../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ \"./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/index.css?");
+eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./index.css */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/index.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\ntransform = __webpack_require__(/*! ../css.transform.js */ \"./css.transform.js\");\n\nvar options = {\"insertInto\":\"body\",\"singleton\":true,\"transform\":\"./css.transform.js\",\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = \"body\";\n\nvar update = __webpack_require__(/*! ../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ \"./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/index.css?");
 
 /***/ }),
 
@@ -194,18 +194,18 @@ eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _common_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common.css */ \"./src/common.css\");\n/* harmony import */ var _common_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_common_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ \"./src/index.scss\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _images_28_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/28.png */ \"./src/images/28.png\");\n/* harmony import */ var _images_28_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_images_28_png__WEBPACK_IMPORTED_MODULE_3__);\n\r\n  // 如果设置 modules: true 样式必须用  base.imgSize 这样的形式调用,#不行。。 不设置用import引入也行\r\n\r\n\r\n/* let flag = false;\r\nsetInterval(() => {\r\n  if (flag) {\r\n    base.unuse()\r\n  } else {\r\n    base.use()\r\n  }\r\n  flag = !flag;\r\n}, 5000) */  //  'style-loader/useable'\r\n\r\n\r\n\r\nlet root = document.createElement('div');\r\nroot.id = 'root';\r\nlet img = new Image();\r\nimg.classList.add('imgSize')\r\n// img.classList.add(base.imgSize) // 设置 modules: true 时\r\n\r\nimg.src = _images_28_png__WEBPACK_IMPORTED_MODULE_3___default.a;\r\n\r\ndocument.body.append(root)\r\nroot.append(img)\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _haha_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./haha.scss */ \"./src/haha.scss\");\n/* harmony import */ var _haha_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_haha_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _less_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./less.less */ \"./src/less.less\");\n/* harmony import */ var _less_less__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_less_less__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _images_28_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/28.png */ \"./src/images/28.png\");\n/* harmony import */ var _images_28_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_images_28_png__WEBPACK_IMPORTED_MODULE_3__);\n  // 如果设置 modules: true 样式必须用  base.imgSize 这样的形式调用,#不行。。 不设置用import引入也行\r\n\r\n\r\n\r\n\r\n\r\nlet root = document.getElementById('root');\r\n\r\nlet img = new Image();\r\nimg.classList.add('imgSize');\r\nimg.src = _images_28_png__WEBPACK_IMPORTED_MODULE_3___default.a;\r\n\r\nroot.append(img);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/index.scss":
-/*!************************!*\
-  !*** ./src/index.scss ***!
-  \************************/
+/***/ "./src/less.less":
+/*!***********************!*\
+  !*** ./src/less.less ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--5-1!../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./index.scss */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/index.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"insertInto\":\"body\",\"singleton\":true,\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = \"body\";\n\nvar update = __webpack_require__(/*! ../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ \"./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/index.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/less.less?");
 
 /***/ })
 

@@ -10,7 +10,8 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './dist/'
   },
   module: {
     rules: [
@@ -103,14 +104,16 @@ module.exports = {
             loader: 'style-loader',
             options: {
               insertInto: 'body',
-              singleton: true   // 放到一个style标签里面
+              singleton: true,   // 放到一个style标签里面
+              transform: './css.transform.js'
             }
           },
           {
             loader: 'css-loader',
             options: {
               // minimize: true // 在高版本中废除了
-              // modules: true
+              modules: true,
+              localIdentName: '[path][name]_[local]_[hash:base64:5]'
             }
           },
           'sass-loader'
@@ -125,12 +128,7 @@ module.exports = {
       }
       
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'webpack'
-    })
-  ]
+  }
 }
 
 

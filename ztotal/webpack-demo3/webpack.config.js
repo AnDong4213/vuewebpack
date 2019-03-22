@@ -1,6 +1,8 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'development',
@@ -10,7 +12,8 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './dist/'
   },
   module: {
     rules: [
@@ -47,55 +50,6 @@ module.exports = {
           }
         }
       },
-      /* {
-        test: /\.(scss|css)$/,
-        use: [
-          'style-loader', 
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          }, 
-          'sass-loader'
-        ]
-      }, */
-      /* {
-        test: /\.(scss|css)$/,
-        use: [
-          'style-loader/url',
-          {
-            loader: 'file-loader'
-          },
-          'sass-loader'
-        ]
-      }, */
-      /* {
-        test: /\.css$/,
-        use: [
-          'style-loader/useable',
-          {
-            loader: 'css-loader'
-          }
-        ]
-      }, */
-      /* {
-        test: /\.(scss|css)$/,
-        use: [
-          {
-            loader: 'style-loader',
-            options: {
-              insertInto: 'body',
-              singleton: true,
-              transform: './css.transform.js'
-            }
-          },
-          {
-            loader: 'css-loader'
-          },
-          'sass-loader'
-        ]
-      }, */
       {
         test: /\.(scss|css)$/,
         use: [
@@ -103,17 +57,38 @@ module.exports = {
             loader: 'style-loader',
             options: {
               insertInto: 'body',
-              singleton: true   // 放到一个style标签里面
+              singleton: true,   // 放到一个style标签里面
+              transform: './css.transform.js'
             }
           },
           {
             loader: 'css-loader',
             options: {
               // minimize: true // 在高版本中废除了
-              // modules: true
+              // modules: true,
+              localIdentName: '[path][name]_[local]_[hash:base64:5]'
             }
           },
           'sass-loader'
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('autoprefixer')()
+              ]
+            }
+          },
+          'less-loader'
         ]
       },
 
@@ -127,8 +102,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'webpack'
+    new MiniCssExtractPlugin({
+      filename: '[name].min.css',
+      chunkFilename: "[id].css"
     })
   ]
 }
