@@ -150,7 +150,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"0f61ec717a5090e861b36115c3478f42.eot\";\n\n//# sourceURL=webpack:///./src/font/iconfont.eot?");
+eval("module.exports = __webpack_require__.p + \"file/0f61ec717a5090e861b36115c3478f42.eot\";\n\n//# sourceURL=webpack:///./src/font/iconfont.eot?");
 
 /***/ }),
 
@@ -161,7 +161,7 @@ eval("module.exports = __webpack_require__.p + \"0f61ec717a5090e861b36115c3478f4
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"758b608f4c8586f1d0dd05a23b5a3c25.svg\";\n\n//# sourceURL=webpack:///./src/font/iconfont.svg?");
+eval("module.exports = __webpack_require__.p + \"file/758b608f4c8586f1d0dd05a23b5a3c25.svg\";\n\n//# sourceURL=webpack:///./src/font/iconfont.svg?");
 
 /***/ }),
 
@@ -172,7 +172,7 @@ eval("module.exports = __webpack_require__.p + \"758b608f4c8586f1d0dd05a23b5a3c2
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"943ddae67f7e88727e604f9950b20ce2.ttf\";\n\n//# sourceURL=webpack:///./src/font/iconfont.ttf?");
+eval("module.exports = __webpack_require__.p + \"file/943ddae67f7e88727e604f9950b20ce2.ttf\";\n\n//# sourceURL=webpack:///./src/font/iconfont.ttf?");
 
 /***/ }),
 
@@ -183,7 +183,7 @@ eval("module.exports = __webpack_require__.p + \"943ddae67f7e88727e604f9950b20ce
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"ad9d9e137a6402003ce1aecf9b8d64ad.woff\";\n\n//# sourceURL=webpack:///./src/font/iconfont.woff?");
+eval("module.exports = __webpack_require__.p + \"file/ad9d9e137a6402003ce1aecf9b8d64ad.woff\";\n\n//# sourceURL=webpack:///./src/font/iconfont.woff?");
 
 /***/ }),
 

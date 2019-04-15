@@ -1,6 +1,8 @@
+$haha: green;
+
 body {
   .imgSize2 {
-    border: 1px dashed green;
+    border: 1px dashed $haha;
     height: 100px;
     width: 100px;
     margin: 20px;
