@@ -1,0 +1,36 @@
+@import './avatar.scss';
+
+body {
+  .imgSize {
+    border: 3px dashed green;
+    transform: translate(50px, 50px) rotate(180deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url('./font/iconfont.eot?t=1553081982258');
+  src: url('./font/iconfont.eot?t=1553081982258#iefix') format('embedded-opentype'),
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPgAAsAAAAACJwAAAORAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqEfIQfATYCJAMMCwgABCAFhG0HPRtsB8gOJQUGzgQAAABAENEaOnt3/xwC8AVWASSXViWpYlSmDkgReiC8WtO7lFHeVIdlkVXIAe0T3G+AZNkGbGF8ha0wJExaocjh/3+vasYEjM2bbXFZ4/2ftTZ9yglgOEABWrtraclaoAJxVcCzmfRZOf0yBPDJxA1dv3scIf0Ywn0CyKwspkl/x4VZ6BZcBHviqkEOYuGqXeoacKD4fXlNrbigsDTh0cbxnRxZf3bq2Rm98n+F3oyE7nABwLgFGiiHYED6J0OddFWlcrrwPdS93GxjENShsv//Q6H1cftC//EUiE2IQtCLLepB6RIFBJ6d0QDj8d8CG4iGcA/4C3p8v0WQb6zo6DBkR4SmyHjV1qGrY7By1PdVKhXuPi7a58v2E0Fgjpg70CqDtIWuCD240jBP0H38TNBMoBHvH0+UE30PH3Y8eNB+717r/fttpdpRQwWse/2yxKsPcu8ejpQ04xuDrtLjSS3trp3uTAqOdRY3EptbSWUnEpqagyPq/TqHE6lEQsKxlW28u9vH1C7q4VA8Gg8MHHR2OtGJo/pDaj4Pz4fqAftgI5kbVQ3+h+q3qvWXlVtRC+Nr9MW0E91RfrxPvnYb+6+zJdPpW2gmTQ/pgTgPaMMhBxz2B+K0XqcJGoc5rtfV6q64K4EHS+nuSM+3afNHtg56utcfLl0x0VHCgmxqPx9bHJ73V5pWfDnVG5LFsfP2CVrIl2K9tROhptOplMTcSKedXDHWye3P3bYwsPhvosYdVKp7Iglj5HR05yZShDt1tToPoBdcX3+Ev+HxxYYgObb81Q0MAI/ObloqHAYuAu7bFBb42nXkhPENoVsbV5toN1XNDoI31YnvY3zZvQCxvO6OJ9CdILgkNKBwyACNSz7Z0MvBIqAebFxWgU8Ze7cD4uB0IcYDSjkREKK5B0Uk50ATzSPZ0Dtgkcg72ESLBp92mXpgQKFMDW5xSCPkWKbM5KxpCLEXB8vuEIh5Lc3bhoIbA+7IWRaorO5X98AAfogTTkEMIgpM4KbOduV1oGkms7ipQBa9EqK16Ksan/omb9bUySDr4ABpECAHI0MZhkwWEwMhm40MDn4+BCCSRyMNXyD0lGMAHAd5cUYAL36CvIcMivBSVjsUEAmCIIK6S4BjosPYRQDQopIJw5repABkQbxIOxQsFvEp0wQWeU+P6+/vHOATfkmLEi0GexQ0QBjMcFmU0ADHIQQAAAA=') format('woff2'),
+  url('./font/iconfont.woff?t=1553081982258') format('woff'),
+  url('./font/iconfont.ttf?t=1553081982258') format('truetype'),
+  url('./font/iconfont.svg?t=1553081982258#iconfont') format('svg'); 
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 26px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icondelete:before {
+  content: "\e699";
+}
+
+.iconbrightness:before {
+  content: "\e69b";
+}
+

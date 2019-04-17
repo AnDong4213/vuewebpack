@@ -12,6 +12,7 @@ module.exports = {
   },
   output: {
     // publicPath:'http://cdn.com.cn',
+    publicPath: '/',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
@@ -20,7 +21,12 @@ module.exports = {
   // 在开发环境中建议使用  cheap-module-eval-source-map
   // 在生产环境中建议使用  cheap-module-source-map
   // source-map会生成.map的文件， 只要有inline会把.map的文件合并到打包生成的目标文件中去
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
+  /* devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    open: true,
+    port: 2019
+  }, */
   module: {
     rules: [
       {
@@ -57,14 +63,13 @@ module.exports = {
           }
         }
       }
-      
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: '',
       template: './src/index.html',
-      minify: true  // mode: 'production' 在mode为生成环境下有效
+      minify: false  // true if mode is 'production', otherwise false
     }),
     new CleanWebpackPlugin()
 

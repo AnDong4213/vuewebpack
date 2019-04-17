@@ -1,0 +1,11 @@
+em {
+  display: block;
+}
+em:nth-of-type(odd) {
+  color: pink;
+}
+em:nth-of-type(even) {
+  color: blueviolet;
+}
+
+

@@ -2,6 +2,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // html-webpack-plugin 会在打包结束后，自动生成一个html文件，并把打包生成的js文件自动引入到这个html文件中
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 // plugin 可以在webpack运行到某个时刻的时候，帮你做一些事情  像vue/react的生命周期函数一样
 
@@ -20,7 +21,14 @@ module.exports = {
   // 在开发环境中建议使用  cheap-module-eval-source-map
   // 在生产环境中建议使用  cheap-module-source-map
   // source-map会生成.map的文件， 只要有inline会把.map的文件合并到打包生成的目标文件中去
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    open: true,
+    port: 8080,
+    hot: true,
+    hotOnly: true   // hot失效时会刷新页面，不需要你刷新页面失效就失效，配置hotOnly为true
+  },
   module: {
     rules: [
       {
@@ -33,6 +41,26 @@ module.exports = {
             limit: 1024 * 10
           }
         }
+      },
+      {
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', {
+              'useBuiltIns': 'entry'
+            }]
+          ]
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.scss$/,
@@ -57,16 +85,16 @@ module.exports = {
           }
         }
       }
-      
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: '',
       template: './src/index.html',
-      minify: true  // mode: 'production' 在mode为生成环境下有效
+      minify: false  // true if mode is 'production', otherwise false
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin()
 
   ]
 }
