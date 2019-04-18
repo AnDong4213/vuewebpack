@@ -45,9 +45,20 @@ module.exports = {
       {
         test: /\.js$/, 
         exclude: /node_modules/, 
-        loader: 'babel-loader',
+        loader: 'babel-loader', //babel-loader处理js文件的时候， babel-loader只是一个webpack和babel做通信的一个桥梁，用了之后做了打通，但并不会把es6语法翻译成es5语法，还需要其他的一些模块才能  @babel/preset-env
         options: {
-          presets: ['@babel/preset-env']
+          presets: [
+            [
+              '@babel/preset-env',
+              {
+                targets: {
+                  chrome: '67'
+                },
+                corejs: 2, // 这个必须设置
+                useBuiltIns: 'usage'
+              }
+            ]
+          ]
         }
       },
       {
@@ -94,5 +105,9 @@ module.exports = {
 
   ]
 }
+
+
+//  如果不设置corejs: 2,  WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+// You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
 
 
