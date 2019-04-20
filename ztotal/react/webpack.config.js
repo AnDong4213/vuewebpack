@@ -45,35 +45,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/, 
-        loader: 'babel-loader', //babel-loader处理js文件的时候， babel-loader只是一个webpack和babel做通信的一个桥梁，用了之后做了打通，但并不会把es6语法翻译成es5语法，还需要其他的一些模块才能  @babel/preset-env
-        /* options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                targets: {
-                  chrome: '67'
-                },
-                corejs: 3, // 这个必须设置
-                useBuiltIns: 'usage'
-              }
-            ]
-          ]
-        } */
-        /* options: {
-          plugins: [
-            [
-              '@babel/plugin-transform-runtime',
-              {
-                absoluteRuntime: false,
-                corejs: 2,
-                helpers: true,
-                regenerator: true,
-                useESModules: false
-              }
-            ]
-          ]
-        } */
+        loader: 'babel-loader' //babel-loader处理js文件的时候， babel-loader只是一个webpack和babel做通信的一个桥梁，用了之后做了打通，但并不会把es6语法翻译成es5语法，还需要其他的一些模块才能  @babel/preset-env
       },
       {
         test: /\.css$/,

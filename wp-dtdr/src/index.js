@@ -54,6 +54,7 @@ function resolveAfter2Seconds(x) {
     }, 2000);
   });
 }
+
 /*async function add1(x) {
 	var a = await resolveAfter2Seconds(20); 
 	var b = await resolveAfter2Seconds(30); 
