@@ -7,7 +7,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "--profile --json > stats.json",
     "watch": "webpack --watch",
     "bundle": "webpack --config ./build/webpack.dev.js",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
+    "jquery": "^3.4.0",
     "lodash": "^4.17.11"
   }
 }

@@ -1,0 +1,29 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["an"],{
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/*! all exports used */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/_jquery@3.4.0@jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n// import './index.css';\nlet root = document.getElementById('root'); // 同步代码...\n\n/* import _ from 'lodash';\r\nlet div = document.createElement('div');\r\ndiv.innerHTML = _.join(['a', 'b', 'c'], '***');\r\ndiv.classList.add('iconfont')\r\nroot.appendChild(div); */\n// 异步代码  能够实现懒加载的行为  \n// (模块懒加载)： 通过import()来异步的加载一个模块，什么时候来加载这个模块，不一定，看什么时候触发它\n\n/* function getComponent() {\r\n  return import(\r\n    'lodash'\r\n  ).then(_ => {\r\n    let element = document.createElement('div');\r\n    element.innerHTML = _.join(['hello', 'world'], '--');\r\n    element.classList.add('iconfont');\r\n    return element;\r\n  })\r\n} */\n\n // import test from './test'\n\nconsole.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()('#root').text()); // console.log(test('andong'))\n\nasync function getComponent() {\n  const _ = await __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.t.bind(null, /*! lodash */ \"./node_modules/_lodash@4.17.11@lodash/lodash.js\", 7));\n\n  let element = document.createElement('div');\n  element.innerHTML = _.join(['hello', 'world'], '**');\n  return element;\n}\n\ndocument.addEventListener('click', () => {\n  getComponent().then(element => {\n    root.appendChild(element);\n  });\n});\ndocument.addEventListener('click', () => {\n  __webpack_require__.e(/*! import() */ \"an\").then(__webpack_require__.bind(null, /*! ./test */ \"./src/test.js\")).then(({\n    default: func\n  }) => {\n    console.log(func('abcd'));\n  });\n}); // 在webpack打包的过程中，生成了几个js文件，每一个js文件都叫做一个chunk//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQgJy4vaW5kZXguY3NzJztcclxubGV0IHJvb3QgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncm9vdCcpO1xyXG5cclxuLy8g5ZCM5q2l5Luj56CBLi4uXHJcbi8qIGltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XHJcbmxldCBkaXYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcclxuZGl2LmlubmVySFRNTCA9IF8uam9pbihbJ2EnLCAnYicsICdjJ10sICcqKionKTtcclxuZGl2LmNsYXNzTGlzdC5hZGQoJ2ljb25mb250Jylcclxucm9vdC5hcHBlbmRDaGlsZChkaXYpOyAqL1xyXG5cclxuXHJcbi8vIOW8guatpeS7o+eggSAg6IO95aSf5a6e546w5oeS5Yqg6L2955qE6KGM5Li6ICBcclxuLy8gKOaooeWdl+aHkuWKoOi9vSnvvJog6YCa6L+HaW1wb3J0KCnmnaXlvILmraXnmoTliqDovb3kuIDkuKrmqKHlnZfvvIzku4DkuYjml7blgJnmnaXliqDovb3ov5nkuKrmqKHlnZfvvIzkuI3kuIDlrprvvIznnIvku4DkuYjml7blgJnop6blj5HlroNcclxuLyogZnVuY3Rpb24gZ2V0Q29tcG9uZW50KCkge1xyXG4gIHJldHVybiBpbXBvcnQoXHJcbiAgICAnbG9kYXNoJ1xyXG4gICkudGhlbihfID0+IHtcclxuICAgIGxldCBlbGVtZW50ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XHJcbiAgICBlbGVtZW50LmlubmVySFRNTCA9IF8uam9pbihbJ2hlbGxvJywgJ3dvcmxkJ10sICctLScpO1xyXG4gICAgZWxlbWVudC5jbGFzc0xpc3QuYWRkKCdpY29uZm9udCcpO1xyXG4gICAgcmV0dXJuIGVsZW1lbnQ7XHJcbiAgfSlcclxufSAqL1xyXG5pbXBvcnQgJCBmcm9tICdqcXVlcnknXHJcbi8vIGltcG9ydCB0ZXN0IGZyb20gJy4vdGVzdCdcclxuXHJcbmNvbnNvbGUubG9nKCQoJyNyb290JykudGV4dCgpKVxyXG4vLyBjb25zb2xlLmxvZyh0ZXN0KCdhbmRvbmcnKSlcclxuXHJcbmFzeW5jIGZ1bmN0aW9uIGdldENvbXBvbmVudCgpIHtcclxuICBjb25zdCBfID0gYXdhaXQgaW1wb3J0KC8qIHdlYnBhY2tQcmVmZXRjaDogdHJ1ZSAqLyAnbG9kYXNoJyk7XHJcbiAgbGV0IGVsZW1lbnQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcclxuICBlbGVtZW50LmlubmVySFRNTCA9IF8uam9pbihbJ2hlbGxvJywgJ3dvcmxkJ10sICcqKicpO1xyXG4gIHJldHVybiBlbGVtZW50O1xyXG59XHJcbmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4ge1xyXG4gIGdldENvbXBvbmVudCgpLnRoZW4oZWxlbWVudCA9PiB7XHJcbiAgICByb290LmFwcGVuZENoaWxkKGVsZW1lbnQpXHJcbiAgfSlcclxufSlcclxuXHJcbmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4ge1xyXG4gIGltcG9ydCgvKiB3ZWJwYWNrUHJlZmV0Y2g6IHRydWUgKi8gJy4vdGVzdCcpLnRoZW4oKHtkZWZhdWx0OiBmdW5jfSkgPT4ge1xyXG4gICAgY29uc29sZS5sb2coZnVuYygnYWJjZCcpKVxyXG4gIH0pXHJcbn0pXHJcblxyXG5cclxuXHJcbi8vIOWcqHdlYnBhY2vmiZPljIXnmoTov4fnqIvkuK3vvIznlJ/miJDkuoblh6DkuKpqc+aWh+S7tu+8jOavj+S4gOS4qmpz5paH5Lu26YO95Y+r5YGa5LiA5LiqY2h1bmtcclxuXHJcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBRUE7Ozs7O0FBT0E7QUFDQTtBQUNBO0FBQUE7Ozs7Ozs7Ozs7O0FBVUE7QUFDQTtBQUVBO0FBQ0E7QUFFQTtBQUNBLHFLQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0EsaUhBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+
+/***/ }),
+
+/***/ "./src/test.js":
+/*!*********************!*\
+  !*** ./src/test.js ***!
+  \*********************/
+/*! exports provided: default */
+/*! all exports used */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (str => {\n  return str.match(/[\\w']+/g).map(item => {\n    return item.split('').reverse().join('');\n  }).join(' ');\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdGVzdC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy90ZXN0LmpzPzg0YjgiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgKHN0cikgPT4ge1xyXG4gIHJldHVybiBzdHIubWF0Y2goL1tcXHcnXSsvZykubWFwKGl0ZW0gPT4ge1xyXG4gICAgcmV0dXJuIGl0ZW0uc3BsaXQoJycpLnJldmVyc2UoKS5qb2luKCcnKVxyXG4gIH0pLmpvaW4oJyAnKVxyXG59XHJcblxyXG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/test.js\n");
+
+/***/ })
+
+}]);
