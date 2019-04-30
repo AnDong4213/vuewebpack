@@ -129,5 +129,5 @@ contenthash 	根据提取文件的内容生成的 hash；
 
 /* all 	把动态和非动态模块同时进行优化打包；所有模块都扔到 vendors.bundle.js 里面。
 initial 	把非动态模块打包进 vendor，动态模块优化打包
-async 	把动态模块打包进 vendor，非动态模块保持原样（不优化） */
+async 	把动态模块打包进 vendor，非动态模块保持原样（不优化） */  
 

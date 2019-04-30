@@ -26,11 +26,7 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader'
-          },
-          /* {
-            // test: require.resolve('index.js'),  // 报错
-            loader: 'imports-loader?this=>window'
-          } */
+          }
         ]
       },
       {
@@ -38,7 +34,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            outputPath: 'file/',
+            outputPath: 'file/'
           }
         }
       }
